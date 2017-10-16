@@ -5,9 +5,9 @@ def median(lst):
     if n < 1:
         return None
     if n % 2 == 1:
-        return sorted(lst)[n//2]
+        return sorted(lst, key=float)[n//2]
     else:
-        return sum(sorted(lst)[n//2-1:n//2+1])/2.0
+        return sum(sorted(lst, key=float)[n//2-1:n//2+1])/2.0
 
 with open('nums.txt') as f:
     nums = f.read().split()
@@ -22,7 +22,7 @@ with open('nums.txt') as f:
     stddev = sqrt(sum((num-mean)**2 for num in numlst)/(n-1))
 
     print('n = {}'.format(n))
-    print('Sorted Data: {}'.format(' '.join(sorted(numlst))))
+    print('Sorted Data: {}'.format(' '.join(sorted(nums, key=float))))
     print('Mean: {0:.4f}'.format(mean))
     print('Median: {0:.4f}'.format(med))
     print('Standard Variance: {0:.4f}'.format(stdvar))
