@@ -22,7 +22,7 @@ with open('nums.txt') as f:
     stddev = sqrt(sum((num-mean)**2 for num in numlst)/(n-1))
 
     print('n = {}'.format(n))
-    print('Sorted Data: {}'.format(' '.join(sorted(numlst, key=float))))
+    print('Sorted Data: {}'.format(' '.join(sorted(nums, key=float))))
     print('Mean: {0:.4f}'.format(mean))
     print('Median: {0:.4f}'.format(med))
     print('Standard Variance: {0:.4f}'.format(stdvar))
